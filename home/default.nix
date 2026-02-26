@@ -6,7 +6,7 @@
     ./bundles/core.nix
     #./bundles/cli.nix
     ./environments/hyprland
-    #./environments/dwl
+    ./environments/dwl
     #./kitty.nix
     #./wayland.nix
   ];

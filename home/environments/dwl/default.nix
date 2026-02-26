@@ -8,9 +8,9 @@ let
       #./patches/focusmonitors.patch
       # add whatever patches you want
     ];
-    postPatch = ''
-      cp ${./config.h} config.h
-    '';
+    #postPatch = ''
+    #  cp ${./config.h} config.h
+    #'';
   });
 in
 {

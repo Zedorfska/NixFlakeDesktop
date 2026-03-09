@@ -75,9 +75,9 @@
     #dm-mono
 
     # Steam
-    steam
-    steamcmd
-    steam-tui
+    #steam
+    #steamcmd
+    #steam-tui
 
     # Discord
     discord

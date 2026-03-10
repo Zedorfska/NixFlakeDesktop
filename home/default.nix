@@ -3,6 +3,8 @@
 {
   imports =
   [
+    ./theme.nix
+    
     ./bundles/core.nix
     #./bundles/cli.nix
     ./environments/hyprland

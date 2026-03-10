@@ -2,19 +2,20 @@
   description = "Znyeg system configuration";
 
   inputs = {
-    #nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nur.url = "github:nix-community/NUR";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, home-manager, nur, ... }: {
     nixosConfigurations.Znyeg = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./hardware-configuration.nix
         ./configuration.nix
         home-manager.nixosModules.home-manager
+        { nixpkgs.overlays = [ nur.overlays.default ]; }
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

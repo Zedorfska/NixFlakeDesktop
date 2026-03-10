@@ -5,7 +5,7 @@
   [
     ../programs/git.nix
     ../programs/iamb.nix
-    ../programs/steam.nix
+    ../programs/librewolf.nix
     #../programs/wofi.nix ## TODO: implement
   ];
 

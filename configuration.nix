@@ -5,6 +5,9 @@
     [
       ./hardware-configuration.nix
       ./drivers.nix
+      ./system/mounts.nix
+
+      ./system/steam.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -104,7 +107,6 @@
     #blockbench
 
     # Browsers
-    librewolf
     firefox
     browsh
 

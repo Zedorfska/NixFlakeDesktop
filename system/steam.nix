@@ -1,4 +1,4 @@
-{ config, lib, pkgs }:
+{ config, lib, pkgs, ... }:
 {
   programs.steam = {
     enable = true;
@@ -7,5 +7,6 @@
       steamcmd
       steam-tui
     ];
+  extraCompatPackages = with pkgs; [ proton-ge-bin ];
   };
 }

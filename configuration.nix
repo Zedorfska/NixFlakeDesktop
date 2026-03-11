@@ -5,7 +5,7 @@
     [
       ./hardware-configuration.nix
       ./drivers.nix
-      ./system/mounts.nix
+      ./system/drives.nix
 
       ./system/steam.nix
     ];
@@ -55,6 +55,8 @@
     pulse.enable = true;
   };
 
+  programs.dconf.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
@@ -83,11 +85,9 @@
     #steam-tui
 
     # Discord
-    discord
-    vencord
-    discordo
-    discord-sh
-    discord-gamesdk
+    #discordo
+    #discord-sh
+    #discord-gamesdk
 
     # Development
     git

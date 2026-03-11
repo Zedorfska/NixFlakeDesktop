@@ -3,6 +3,7 @@
 {
   imports =
   [
+    ./monitors.nix
     ./theme.nix
     
     ./bundles/core.nix

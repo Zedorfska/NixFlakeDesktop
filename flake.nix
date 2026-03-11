@@ -6,9 +6,10 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nur.url = "github:nix-community/NUR";
+    nixcord.url = "github:KaylorBen/nixcord";
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, ... }: {
+  outputs = { self, nixpkgs, home-manager, nur, nixcord, ... }: {
     nixosConfigurations.Znyeg = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -16,6 +17,7 @@
         ./configuration.nix
         home-manager.nixosModules.home-manager
         { nixpkgs.overlays = [ nur.overlays.default ]; }
+        { home-manager.sharedModules = [ nixcord.homeModules.nixcord ]; }
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

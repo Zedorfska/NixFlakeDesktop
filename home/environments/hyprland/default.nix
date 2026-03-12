@@ -27,8 +27,6 @@ in
     enable = true;
     
     settings = {
-        
-      monitor = ",preferred,auto,1";
       
       exec-once =
       [
@@ -95,7 +93,7 @@ in
         (mkBind k.ws8  "workspace, 8")
         (mkBind k.ws9  "workspace, 9")
         (mkBind k.ws10 "workspace, 10")
-        (mkBind k.wsA  "workspace, name:A")
+        (mkBind k.wsA  "togglespecialworkspace, Magic")
 
         # Move to workspaces
         (mkBind k.mv_to_ws1  "movetoworkspace, 1")
@@ -108,7 +106,7 @@ in
         (mkBind k.mv_to_ws8  "movetoworkspace, 8")
         (mkBind k.mv_to_ws9  "movetoworkspace, 9")
         (mkBind k.mv_to_ws10 "movetoworkspace, 10")
-        (mkBind k.mv_to_wsA  "movetoworkspace, name:A")
+        (mkBind k.mv_to_wsA  "movetoworkspace, special:Magic")
       ];
     };
   };

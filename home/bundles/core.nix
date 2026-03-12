@@ -7,6 +7,8 @@
     ../programs/iamb.nix
     ../programs/librewolf.nix
     ../programs/discord.nix
+
+    ../programs/rmpc.nix
     #../programs/wofi.nix ## TODO: implement
   ];
 

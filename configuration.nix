@@ -110,10 +110,6 @@
     firefox
     browsh
 
-    # Music
-    mpd
-    rmpc
-
     # 
     syncthing
   ];
